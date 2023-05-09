@@ -10,13 +10,14 @@ public class Mobile {
 		boolean isDamaged=true;
 
 	public static void main(String[] args) {
-		System.out.println(mobileBrandName);
-		System.out.println(mobileLogo);
-		System.out.println(noOfMobilePiece);
-		System.out.println(modelNumber);
-		System.out.println(mobileImeiNumber);
-		System.out.println(mobilePrice);
-		System.out.println(isDamaged);
+		Mobile mobile=new mobile();
+		System.out.println(mobile.mobileBrandName);
+		System.out.println(mobile.mobileLogo);
+		System.out.println(mobile.noOfMobilePiece);
+		System.out.println(mobile.modelNumber);
+		System.out.println(mobile.mobileImeiNumber);
+		System.out.println(mobile.mobilePrice);
+		System.out.println(mobile.isDamaged);
 		
 	
 	}
