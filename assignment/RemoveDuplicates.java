@@ -10,7 +10,7 @@ public class RemoveDuplicates {
 		String[] words = text.split(" ");
 		for (int i = 0; i < words.length; i++) {
 		    String word = words[i];
-		    String result="";
+		    
 		    count = 0;
 
 		    for (int j = 0; j < words.length; j++) {
