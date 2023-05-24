@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class DeleteLead {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		ChromeDriver driver=new ChromeDriver();
 		driver.get("http://leaftaps.com/opentaps/control/login");
 		driver.manage().window().maximize();
@@ -27,7 +27,7 @@ public class DeleteLead {
 //		7	Click Find leads
         WebElement findlead = driver.findElement(By.linkText("Find Leads"));
         findlead.click();
-//      8   Click on Phone
+//      8   Click on Phone	
         WebElement phone = driver.findElement(By.linkText("Phone"));
         phone.click();
 //		9	Enter phone number
@@ -37,16 +37,15 @@ public class DeleteLead {
         WebElement findLeadsButton = driver.findElement(By.xpath("//button[text()='Find Leads']"));
         findLeadsButton.click();
 //		11	Capture lead ID of First Resulting lead
-        WebElement firstLead = driver.findElement(By.xpath("//a[text()='15582']"));
+      Thread.sleep(3000);
+        WebElement firstLead = driver.findElement(By.xpath("(//table[@class='x-grid3-row-table']//tr[1]//td[1])[1]//a"));
         System.out.println(firstLead.getText());
 //		12	Click First Resulting lead
         firstLead.click();
 //		13	Click Delete
-       // driver.findElement(by)
-//		14	Click Find leads
-//		15	Enter captured lead ID
-//		16	Click find leads button
-//		17	Verify message "No records to display" in the Lead List. This message confirms the successful deletion
+        WebElement delete = driver.findElement(By.xpath("//a[text()='Delete']"));
+        delete.click();
+        driver.close();
 //		18	Close the browser (Do not log out)
 
 	}
