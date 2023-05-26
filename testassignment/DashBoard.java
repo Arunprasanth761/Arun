@@ -56,6 +56,7 @@ public class DashBoard {
 		course.sendKeys("Playwright");
 		driver.findElement(By.xpath("//span[@id='j_idt87:auto-complete_panel']//li[4]")).click();
 		Thread.sleep(3000);
+		driver.close();
 
 	}
 
